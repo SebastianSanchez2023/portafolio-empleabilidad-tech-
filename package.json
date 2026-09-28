@@ -1,0 +1,20 @@
+{
+  "name": "portafolio-digital-sebastian-sanchez",
+  "version": "1.0.0",
+  "description": "Portafolio Digital y Proyecto de Empleabilidad - Talento Junior Tech (Alkemy)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "backend",
+    "nodejs",
+    "express",
+    "mysql",
+    "alkemy",
+    "junior-tech"
+  ],
+  "author": "Sebastián Sánchez",
+  "license": "MIT"
+}
