@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación del Módulo: Desarrollo de Portafolio y Empleabilidad - Sebastián Sánchez</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 18mm 20mm 18mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            background: #ffffff;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+
+        /* PORTADA */
+        .cover-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30mm 10mm 20mm 10mm;
+            page-break-after: always;
+        }
+
+        .cover-top {
+            border-left: 6px solid #0284c7;
+            padding-left: 20px;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 9pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .cover-title {
+            font-size: 26pt;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .cover-subtitle {
+            font-size: 14pt;
+            color: #475569;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .cover-meta {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 40px;
+        }
+
+        .cover-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .meta-item strong {
+            display: block;
+            font-size: 8.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #64748b;
+            margin-bottom: 3px;
+        }
+
+        .meta-item span {
+            font-size: 11pt;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cover-footer {
+            border-top: 2px solid #e2e8f0;
+            padding-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 9pt;
+            color: #64748b;
+        }
+
+        /* SECCIONES ESTÁNDAR */
+        .page-break {
+            page-break-before: always;
+        }
+
+        h2.section-header {
+            font-size: 16pt;
+            color: #0f172a;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 6px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3.subsection-header {
+            font-size: 12pt;
+            color: #0369a1;
+            margin-top: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 14px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* TABLAS ESTILIZADAS */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 22px 0;
+            font-size: 9pt;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 8pt;
+            letter-spacing: 0.5px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* TARJETAS Y CAJAS DESTACADAS */
+        .callout-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            border-radius: 4px;
+            padding: 12px 16px;
+            margin: 14px 0;
+            font-size: 9.5pt;
+        }
+
+        .callout-info {
+            background: #f0f9ff;
+            border-left: 4px solid #0284c7;
+            border-radius: 4px;
+            padding: 12px 16px;
+            margin: 14px 0;
+            font-size: 9.5pt;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .metric-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .metric-num {
+            font-size: 16pt;
+            font-weight: 800;
+            color: #0284c7;
+            display: block;
+        }
+
+        .metric-text {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* FODA CUADRICULA */
+        .foda-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 12px;
+            margin: 15px 0;
+        }
+
+        .foda-cell {
+            width: 50%;
+            padding: 14px;
+            border-radius: 8px;
+            vertical-align: top;
+            border: 1px solid #e2e8f0;
+        }
+
+        .foda-fortalezas { background: #f0fdf4; border-color: #bbf7d0; }
+        .foda-debilidades { background: #fffbeb; border-color: #fef3c7; }
+        .foda-oportunidades { background: #eff6ff; border-color: #bfdbfe; }
+        .foda-amenazas { background: #fef2f2; border-color: #fecaca; }
+
+        .foda-title {
+            font-weight: 700;
+            font-size: 10.5pt;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .foda-fortalezas .foda-title { color: #166534; }
+        .foda-debilidades .foda-title { color: #92400e; }
+        .foda-oportunidades .foda-title { color: #1e40af; }
+        .foda-amenazas .foda-title { color: #991b1b; }
+
+        .foda-cell ul {
+            margin-left: 16px;
+            margin-bottom: 0;
+            font-size: 8.5pt;
+        }
+
+        .foda-cell li {
+            margin-bottom: 4px;
+        }
+
+        /* CASO DE ESTUDIO ITEMS */
+        .case-item {
+            margin-bottom: 14px;
+        }
+
+        .case-item-title {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 10.5pt;
+            margin-bottom: 3px;
+        }
+
+        /* PITCH BOX */
+        .pitch-container {
+            background: #f8fafc;
+            border: 1px dashed #0284c7;
+            border-radius: 8px;
+            padding: 16px;
+            font-style: italic;
+            font-size: 10pt;
+            color: #1e293b;
+            line-height: 1.7;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================================================================= -->
+    <!-- PORTADA FORMAL                                                    -->
+    <!-- ================================================================= -->
+    <div class="cover-page">
+        <div class="cover-top">
+            <span class="cover-badge">Evaluación Final Integrada</span>
+            <h1 class="cover-title">Desarrollo de Portafolio & Empleabilidad Digital</h1>
+            <p class="cover-subtitle">Proyecto: Prepárate para el mercado laboral — Postulación a Talento Junior Tech</p>
+        </div>
+
+        <div class="cover-meta">
+            <div class="cover-meta-grid">
+                <div class="meta-item">
+                    <strong>Postulante / Autor:</strong>
+                    <span>Sebastián Sánchez</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Posición de Destino:</strong>
+                    <span>Talento Junior Tech (Trainee / Junior Backend)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Especialidad Técnica:</strong>
+                    <span>Desarrollo Backend (Node.js, Express, MySQL, ORM, JWT)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Institución Formativa:</strong>
+                    <span>Alkemy / Duoc UC</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Empresa Seleccionada:</strong>
+                    <span>Mercado Libre (Meli)</span>
+                </div>
+                <div class="meta-item">
+                    <strong>Repositorio Central:</strong>
+                    <span style="font-size: 9pt; word-break: break-all;">github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cover-footer">
+            <span>Programa Intensivo de Desarrollo de Software Backend</span>
+            <span>Septiembre 2026 • Santiago, Chile</span>
+        </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- PARTE 1: INVESTIGACIÓN DE EMPRESA (MERCADO LIBRE)                 -->
+    <!-- ================================================================= -->
+    <div>
+        <h2 class="section-header">1. Investigación de Empresa Objetivo: Mercado Libre (Meli)</h2>
+        <p>
+            Mercado Libre representa el ecosistema tecnológico, de comercio electrónico y de soluciones fintech líder indiscutido en América Latina. Su infraestructura de ingeniería a hiperescala procesa millones de eventos transaccionales por segundo bajo rigurosos estándares de disponibilidad, baja latencia y ciberseguridad. A continuación, se presenta la justificación técnica estructurada en los 5 ejes requeridos por la convocatoria:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Eje de Análisis</th>
+                    <th style="width: 45%;">Prácticas y Estándares en Mercado Libre</th>
+                    <th style="width: 35%;">Justificación y Atractivo Técnico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Valores y Propósito</strong></td>
+                    <td>Democratizar el comercio y los servicios financieros en toda la región para reducir la brecha de inclusión económica. Cultura de agilidad (<em>"estar en beta continuo"</em>), resiliencia y fuerte sentido de ownership.</td>
+                    <td>Conecta directamente con mi propósito vocacional: desarrollar software que transforma positivamente la economía real de millones de usuarios y pymes mediante sistemas seguros y transparentes.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Tipo de Productos</strong></td>
+                    <td>Ecosistema de alta escala y criticidad: <strong>Mercado Pago</strong> (billetera digital, transacciones en tiempo real, cobros QR, crédito), <strong>Marketplace</strong> (catálogo masivo y búsqueda indexada) y <strong>Mercado Envíos</strong> (logística automatizada).</td>
+                    <td>Desarrollar para flujos donde cada milisegundo es crucial en validaciones financieras y prevención de fraude impone una disciplina de excelencia que acelera mi maduración profesional.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Tecnologías que Utilizan</strong></td>
+                    <td>Arquitectura distribuida de microservicios. Lenguajes: <strong>Node.js</strong>, <strong>Go</strong>, <strong>Java</strong>. Bases de datos: <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>Redis</strong>. Mensajería: <strong>Apache Kafka</strong>. Plataforma Cloud propia: <strong>Fury PaaS</strong> sobre AWS/GCP.</td>
+                    <td>Combina tecnologías en las que he adquirido sólida práctica (Node.js, Express, MySQL) con componentes de infraestructura y mensajería distribuida hacia los cuales proyecto mi carrera.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Metodologías de Trabajo</strong></td>
+                    <td>Células ágiles autónomas (<em>Squads</em>) con Scrum y Kanban. Pipelines de <strong>CI/CD</strong> completamente automatizados, revisiones de código exhaustivas, testing continuo y arquitectura hexagonal basada en Domain-Driven Design (DDD).</td>
+                    <td>Ofrece un entorno estructurado de aprendizaje continuo con mentoría de clase mundial, donde la calidad, la observabilidad y los tests son requisitos indispensables antes de llegar a producción.</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Enfoque en Innovación</strong></td>
+                    <td>Pioneros en la creación de PaaS interna (Fury), adopción masiva de modelos de Machine Learning para detección de fraude en tiempo real, scoring crediticio automatizado y personalización dinámica.</td>
+                    <td>Es una compañía que no solo adopta tecnología, sino que es referente en ingeniería de software distribuida para toda la industria tecnológica latinoamericana.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="subsection-header">1.1. Tres Formas Concretas de Aportar Valor como Junior Tech</h3>
+        <ol>
+            <li>
+                <strong>Curva de Aprendizaje Acelerada en Backend y Persistencia Relacional:</strong>
+                Dominio práctico en la construcción de endpoints con Node.js, Express y Sequelize ORM en MySQL, permitiendo ser productivo a corto plazo en tareas de mantenimiento, refactorización y extensión de servicios dentro del squad asignado.
+            </li>
+            <li>
+                <strong>Criterio de Ciberseguridad y Buenas Prácticas desde el Diseño:</strong>
+                Aplicación rigurosa de principios de seguridad defensiva: hashing unidireccional con Bcrypt (10 rounds), autenticación desacoplada stateless con tokens JWT, mitigación de SQL Injection y control estricto contra ataques de asignación masiva (*Mass Assignment*).
+            </li>
+            <li>
+                <strong>Compromiso con la Calidad, Trazabilidad y Documentación Técnica:</strong>
+                Hábito arraigado de respaldar el desarrollo mediante suites de pruebas automatizadas de integración, registro de auditoría en archivos planos para análisis forense de fallos, y documentación viva interactiva bajo el estándar OpenAPI 3.0 (Swagger UI).
+            </li>
+        </ol>
+
+        <h3 class="subsection-header">1.2. Tres Preguntas Estratégicas para la Entrevista con el Reclutador / Líder Técnico</h3>
+        <ul>
+            <li>
+                <em>"¿Cómo está estructurado el proceso de onboarding técnico para los nuevos talentos Junior en el squad y qué dinámicas de mentoría o pair-programming implementan para acompañar el crecimiento durante los primeros 90 días?"</em>
+            </li>
+            <li>
+                <em>"Dada la enorme escala de millones de eventos por segundo en Fury, ¿qué herramientas de observabilidad y tracing distribuido (como Datadog, Prometheus o OpenTelemetry) suelen monitorear los desarrolladores en su día a día al desplegar cambios en los microservicios?"</em>
+            </li>
+            <li>
+                <em>"Desde la perspectiva del equipo de arquitectura, ¿cuáles son los principales desafíos técnicos que están abordando actualmente en términos de desacoplamiento de servicios o migración tecnológica para los próximos trimestres?"</em>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- PARTE 2: CASO DE ESTUDIO TÉCNICO (PORTAFOLIO)                     -->
+    <!-- ================================================================= -->
+    <div class="page-break">
+        <h2 class="section-header">2. Caso de Estudio Técnico: API RESTful Escalable con Sequelize & JWT</h2>
+        <div class="callout-info">
+            <strong>Ficha del Proyecto:</strong> Node & Express Web App — Módulos 6, 7 & 8 | <strong>Rol:</strong> Desarrollador Backend Principal | <strong>Stack:</strong> Node.js, Express, MySQL 8, Sequelize ORM, JWT, Bcrypt, Multer, Swagger UI | <strong>Código:</strong> github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">1. Breve descripción de la actividad o tarea:</div>
+            <p>
+                Diseño, implementación y exposición de una API RESTful profesional destinada a la administración de usuarios, perfiles personales, órdenes comerciales y catálogo de productos. El sistema requería una arquitectura modular en capas, persistencia mixta (base de datos relacional MySQL + persistencia de auditoría en archivos planos con `fs`), manejo seguro de carga de archivos binarios vinculados a la base de datos (Multer) y autenticación stateless con JSON Web Tokens (JWT).
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">2. Desafío principal que implicaba:</div>
+            <p>
+                Garantizar la <strong>consistencia atómica (ACID)</strong> en operaciones transaccionales dependientes (creación simultánea de usuario, asignación de perfil 1:1, orden de bienvenida 1:N y vinculación de productos N:M), asegurando que cualquier excepción en la base de datos abortara de manera inmediata todos los cambios (Rollback total) sin retener registros huérfanos. Al mismo tiempo, se requería proteger rutas privadas con JWT sin degradar la latencia ni exponer credenciales sensibles.
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">3. Solución técnica propuesta:</div>
+            <p>
+                Se implementó una <strong>Arquitectura en Capas (Layered Architecture)</strong> separando `routes/`, `controllers/`, `services/`, `middlewares/` y `models/`. La atomicidad se resolvió mediante transacciones controladas de Sequelize (`sequelize.transaction()`) con registro forense de fallos en `logs/transactions_errors.log`. La seguridad se blindó con hooks de hashing automático (Bcrypt), exclusión de contraseñas mediante `defaultScope`, y un middleware `verifyJWT` que valida firmas HS256 y caducidad de tokens. La subida de archivos se estructuró con Multer (`diskStorage`) con nombres únicos anticolisión y actualización automática de los campos `avatar` en MySQL.
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">4. Herramientas técnicas utilizadas para el desarrollo:</div>
+            <p>
+                Node.js v18+, Express.js v4.19, MySQL 8.0 con driver `mysql2`, Sequelize ORM v6, `jsonwebtoken`, `bcryptjs`, `multer`, `swagger-ui-express` y `swagger-jsdoc` (OpenAPI 3.0), Postman y Git/GitHub.
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">5. Principales aprendizajes alcanzados:</div>
+            <p>
+                Modelado de relaciones complejas en Sequelize (**1:1**, **1:N** y **N:M** con tabla intermedia con atributos extra), optimización de consultas anidadas mediante <em>Eager Loading</em> (`include`) para mitigar el problema *N+1 queries*, diseño de middlewares de autenticación y autorización por roles (RBAC), y estructuración de respuestas HTTP uniformes `{ status, message, data }`.
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">6. Métricas de impacto logradas:</div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-num">100%</span>
+                    <span class="metric-text">Atomicidad ACID en Transacciones</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-num">0%</span>
+                    <span class="metric-text">Exposición de Contraseñas (Scopes)</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-num">100%</span>
+                    <span class="metric-text">Tests Automatizados Aprobados</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-num">&lt; 35ms</span>
+                    <span class="metric-text">Latencia Media en Consultas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">7. Habilidades técnicas y blandas aplicadas:</div>
+            <p>
+                <strong>Hard Skills:</strong> Programación asíncrona avanzada (`async/await`, Promises), diseño RESTful, administración de esquemas relacionales, seguridad OWASP, JWT stateless, testing HTTP. <br>
+                <strong>Soft Skills:</strong> Resolución metódica de problemas técnicos, pensamiento analítico orientado a datos, autonomía en depuración y comunicación técnica estructurada.
+            </p>
+        </div>
+
+        <div class="case-item">
+            <div class="case-item-title">8. Justificación de por qué elegiste este proyecto para formar parte de tu portafolio:</div>
+            <p>
+                Constituye una muestra concreta de código listo para producción. Resuelve problemas reales que todo desarrollador backend enfrenta en la industria: atomicidad transaccional ante caídas de servicio, seguridad criptográfica en credenciales, integración de binarios en almacenamiento físico con trazabilidad en base de datos y documentación viva estandarizada bajo especificación OpenAPI.
+            </p>
+        </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- PARTE 3: PLUS - MATRIZ FODA PERSONAL Y PROFESIONAL               -->
+    <!-- ================================================================= -->
+    <div class="page-break">
+        <h2 class="section-header">3. PLUS: Matriz FODA Personal y Profesional</h2>
+        <p>
+            Autodiagnóstico reflexivo que analiza las capacidades internas del candidato frente a las dinámicas, demandas y exigencias competitivas del mercado laboral tecnológico actual:
+        </p>
+
+        <table class="foda-table">
+            <tr>
+                <td class="foda-cell foda-fortalezas">
+                    <div class="foda-title">💪 Fortalezas (Factores Internos)</div>
+                    <ul>
+                        <li><strong>Arquitectura Backend Limpia:</strong> Capacidad para diseñar APIs desacopladas y mantenibles con Node.js y Express.</li>
+                        <li><strong>Modelado Relacional ORM:</strong> Dominio de Sequelize y MySQL para estructurar esquemas 1:1, 1:N, N:M y consultas optimizadas.</li>
+                        <li><strong>Criterio de Ciberseguridad:</strong> Hashing Bcrypt, sesiones stateless con JWT y mitigación de vulnerabilidades OWASP.</li>
+                        <li><strong>Documentación y Estándares:</strong> Redacción rigurosa de manuales técnicos, diagramas Mermaid y Swagger OpenAPI.</li>
+                        <li><strong>Resiliencia y Capacidad de Aprendizaje:</strong> Autonomía comprobada para diagnosticar y corregir errores complejos.</li>
+                    </ul>
+                </td>
+                <td class="foda-cell foda-debilidades">
+                    <div class="foda-title">🎯 Áreas de Oportunidad (Factores Internos)</div>
+                    <ul>
+                        <li><strong>Contenerización con Docker:</strong> Fortalecer el empaquetado y orquestación de servicios en contenedores.</li>
+                        <li><strong>Message Brokers Asíncronos:</strong> Profundizar en colas de eventos con RabbitMQ o Apache Kafka.</li>
+                        <li><strong>Caching Distribuido con Redis:</strong> Integrar capas de caché en memoria para reducción extrema de latencia.</li>
+                        <li><strong>Inglés Técnico Conversacional:</strong> Mejorar la soltura en entrevistas y dinámicas de equipo en inglés.</li>
+                        <li><strong>Testing Unitario con Cobertura Formal:</strong> Ampliar el uso de Jest integrando métricas de cobertura automatizadas.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="foda-cell foda-oportunidades">
+                    <div class="foda-title">🚀 Oportunidades (Factores Externos)</div>
+                    <ul>
+                        <li><strong>Crecimiento Sostenido de Fintechs en LatAm:</strong> Alta demanda de perfiles backend especializados en transacciones.</li>
+                        <li><strong>Priorización de la Seguridad en el Software:</strong> Búsqueda de programadores que comprendan autenticación robusta y JWT.</li>
+                        <li><strong>Flexibilidad del Trabajo Remoto:</strong> Apertura para postular a hubs tecnológicos en toda la región sin límite geográfico.</li>
+                        <li><strong>Diferenciación con Código Real en GitHub:</strong> Ventaja competitiva frente a perfiles teóricos al exhibir repositorios funcionales.</li>
+                        <li><strong>Expansión del Comercio Electrónico:</strong> Necesidad constante de ingenieros orientados a consistencia de datos y APIs.</li>
+                    </ul>
+                </td>
+                <td class="foda-cell foda-amenazas">
+                    <div class="foda-title">🛡️ Amenazas & Estrategias de Mitigación (Externos)</div>
+                    <ul>
+                        <li><strong>Competencia en Perfiles Junior:</strong> <em>Mitigación:</em> Destacar con arquitecturas modulares, transacciones ACID y Swagger.</li>
+                        <li><strong>Elevación de Requisitos de Entrada:</strong> <em>Mitigación:</em> Estudio continuo de patrones de diseño y computación distribuida.</li>
+                        <li><strong>Herramientas de IA en Tareas Básicas:</strong> <em>Mitigación:</em> Posicionarse con criterio arquitectónico y resolución de negocio.</li>
+                        <li><strong>Filtro por Falta de Experiencia Previa:</strong> <em>Mitigación:</em> Demostrar experiencia práctica equivalente en proyectos reales.</li>
+                        <li><strong>Evolución Tecnológica Acelerada:</strong> <em>Mitigación:</em> Dominar sólidamente los fundamentos de bases de datos y algoritmos.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- PARTE 4 & 5: CATÁLOGO DE PROYECTOS & ELEVATOR PITCH               -->
+    <!-- ================================================================= -->
+    <div class="page-break">
+        <h2 class="section-header">4. Catálogo de Proyectos del Portafolio Técnico</h2>
+        <p>Muestra representativa de los productos digitales construidos durante el programa formativo:</p>
+
+        <div class="callout-box">
+            <strong style="color: #0284c7; font-size: 11pt;">Proyecto 1 (Destacado): Node & Express Web App — API RESTful Segura</strong><br>
+            <span style="font-size: 8.5pt; color: #64748b;">Stack: Node.js • Express • MySQL 8 • Sequelize ORM • JWT • Bcrypt • Multer • Swagger UI</span>
+            <p style="margin-top: 6px; font-size: 9pt;">
+                API RESTful completa con arquitectura modular en capas. Integra autenticación con JWT, persistencia relacional con relaciones 1:1, 1:N y N:M, transacciones ACID con garantía de rollback, subida y vinculación de archivos con Multer, y documentación OpenAPI 3.0 interactiva.
+            </p>
+        </div>
+
+        <div class="callout-box" style="background: #faf5ff; border-left-color: #9333ea;">
+            <strong style="color: #7e22ce; font-size: 11pt;">Proyecto 2: Alke Wallet — Sistema Transaccional Fintech</strong><br>
+            <span style="font-size: 8.5pt; color: #64748b;">Stack: JavaScript ES6+ • Programación Orientada a Objetos • MySQL • Lógica Contable Bancaria</span>
+            <p style="margin-top: 6px; font-size: 9pt;">
+                Simulación integral de una billetera digital transaccional que gestiona cuentas, balances monetarios, depósitos, retiros y transferencias interbancarias con validación de fondos y conciliación contable en base de datos.
+            </p>
+        </div>
+
+        <div class="callout-box" style="background: #f8fafc; border-left-color: #475569;">
+            <strong style="color: #334155; font-size: 11pt;">Proyecto 3: TaskFlow / Daily Time Organizer</strong><br>
+            <span style="font-size: 8.5pt; color: #64748b;">Stack: JavaScript • Manipulación del DOM • Web Storage API • CSS Grid/Flexbox</span>
+            <p style="margin-top: 6px; font-size: 9pt;">
+                Gestor dinámico de productividad y eventos con algoritmos de ordenamiento cronológico, filtrado reactivo por prioridad y persistencia local sin recargas de página.
+            </p>
+        </div>
+
+        <h2 class="section-header" style="margin-top: 30px;">5. Presentación Profesional & Elevator Pitch</h2>
+
+        <h3 class="subsection-header">5.1. Elevator Pitch (Discurso de 60 Segundos para Entrevistas)</h3>
+        <div class="pitch-container">
+            "Hola, soy <strong>Sebastián Sánchez</strong>, Desarrollador Backend enfocado en la construcción de APIs RESTful escalables, seguras y robustas utilizando el ecosistema de <strong>Node.js, Express y bases de datos relacionales con Sequelize y MySQL</strong>.<br><br>
+            Recientemente finalicé un programa intensivo de ingeniería backend en Alkemy, donde lideré el diseño y desarrollo de arquitecturas en capas completas: desde la implementación de transacciones ACID atómicas con garantía de rollback, hasta esquemas de autenticación criptográfica con JWT, hashing Bcrypt y gestión de archivos con Multer. Mi enfoque no se limita a escribir código que funcione; me obsesiona la consistencia de los datos, la seguridad preventiva y la documentación clara a través de estándares internacionales como OpenAPI y Swagger.<br><br>
+            Me entusiasma profundamente la cultura de innovación de organizaciones como <strong>Mercado Libre</strong>, donde la ingeniería resuelve desafíos masivos de inclusión financiera y comercio a escala regional. Estoy listo para incorporarme como <strong>Talento Junior Tech</strong>, aportar disciplina técnica y aprender aceleradamente junto a sus squads de desarrollo."
+        </div>
+
+        <h3 class="subsection-header">5.2. Titular y Extracto Optimizado para LinkedIn</h3>
+        <p><strong>Titular sugerido:</strong></p>
+        <p style="font-family: monospace; background: #f1f5f9; padding: 8px 12px; border-radius: 4px; font-size: 9pt;">
+            Desarrollador Backend | Node.js • Express.js • MySQL • Sequelize ORM • RESTful APIs • JWT • Ciberseguridad Aplicada | Talento Junior Tech
+        </p>
+
+        <p><strong>Extracto profesional sugerido:</strong></p>
+        <p style="font-size: 9pt; color: #334155; text-align: justify;">
+            Desarrollador Backend con sólida formación en el diseño, desarrollo y documentación de APIs RESTful modernas utilizando Node.js, Express y motores de bases de datos relacionales (MySQL con Sequelize ORM). Experiencia práctica construyendo arquitecturas desacopladas en capas, implementando transacciones ACID con garantía de rollback, autenticación y autorización criptográfica mediante JSON Web Tokens (JWT) y Bcrypt, subida segura de archivos binarios con Multer y documentación viva bajo el estándar OpenAPI 3.0 (Swagger UI). Apasionado por las buenas prácticas (Clean Code, DRY, principios REST, seguridad OWASP) y metodologías ágiles (Scrum/Kanban). En constante aprendizaje hacia arquitecturas de microservicios y soluciones cloud.
+        </p>
+    </div>
+
+</body>
+</html>
