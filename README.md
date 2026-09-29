@@ -38,6 +38,22 @@ Esta carpeta contiene la solución completa a la evaluación final de Empleabili
 3. Abre tu navegador web en:
    👉 **http://localhost:8080**
 
+
+   ### 🚀 Cómo Visualizar el Portafolio Web en Local
+
+1. Clona el repositorio y entra en la carpeta del proyecto:
+   git clone https://github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App.git
+   cd Proyecto-Node-Express-Web-App
+
+2. Instala las dependencias del proyecto:
+   npm install
+
+3. Inicia el servidor local:
+   npm start
+
+4. Abre tu navegador web en:
+   http://localhost:8080
+
 ---
 
 ## 🌐 3. Publicación Gratuita en GitHub Pages (Opcional)
