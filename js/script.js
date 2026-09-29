@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     copyEmailButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const email = 'seba.sanchez@example.com';
+            const email = 'se.sancheza@duocuc.cl';
             navigator.clipboard.writeText(email).then(() => {
-                showToast('¡Correo electrónico copiado al portapapeles!');
+                showToast('¡Correo electrónico copiado al portapapeles! (' + email + ')');
             }).catch(() => {
-                showToast('Correo: seba.sanchez@example.com');
+                showToast('Correo: ' + email);
             });
         });
     });

@@ -3,7 +3,8 @@
 > **Convocatoria de Selección:** Talento Junior Tech (Trainee / Junior)  
 > **Postulante:** Sebastián Sánchez  
 > **Especialidad:** Desarrollo Backend (Node.js, Express, MySQL, Sequelize ORM, APIs RESTful, JWT)  
-> **Institución Formativa:** Alkemy / Duoc UC  
+> **Institución Formativa:** SENCE  
+> **Correo Electrónico:** se.sancheza@duocuc.cl  
 > **Fecha:** Septiembre 2026  
 > **Repositorio del Portafolio y Proyectos:** [https://github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App](https://github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App)  
 
@@ -31,7 +32,8 @@
 - **Nivel:** Trainee / Junior
 - **Modalidad:** Remota / Híbrida
 - **Candidato:** Sebastián Sánchez
-- **Formación:** Bootcamp Intensivo de Desarrollo Backend — Alkemy
+- **Correo Electrónico:** se.sancheza@duocuc.cl
+- **Formación:** Bootcamp Intensivo de Desarrollo Backend — SENCE
 - **Objetivo de Carrera:** Consolidar una trayectoria profesional en ingeniería de software backend, aportando en el diseño, construcción y mantenimiento de microservicios robustos, APIs RESTful seguras y arquitecturas orientadas a eventos de alta concurrencia.
 
 ---
@@ -156,7 +158,7 @@ quadrantChart
 4. **Disciplina en Documentación y Buenas Prácticas:** Redacción de READMEs exhaustivos, diagramas de arquitectura (Mermaid), documentación OpenAPI/Swagger y reflexiones técnicas justificadas.
 5. **Resiliencia y Capacidad de Aprendizaje Continuo:** Autonomía comprobada para resolver incidencias técnicas complejas, adaptarse a nuevas librerías y asimilar retroalimentación de código.
 
-#### 5 Áreas de Oportunidad / Debilidades (Aspectos a mejorar y plan de acción):
+#### 5 Debilidades (Factores Internos - Aspectos técnicos a mejorar y plan de acción):
 1. **Experiencia en Entornos de Contenerización (Docker / Kubernetes):** *Plan de acción:* Desarrollar proyectos personales contenerizando aplicaciones Node.js y MySQL mediante Docker Compose.
 2. **Profundización en Arquitecturas Orientadas a Eventos (Message Brokers):** *Plan de acción:* Estudiar y prototipar servicios de colas con RabbitMQ o Apache Kafka para mensajería asíncrona.
 3. **Optimización Avanzada de Rendimiento a Escala Masiva:** *Plan de acción:* Implementar capas de caching distribuido con Redis y herramientas de análisis de cuellos de botella (profiling).
@@ -211,7 +213,7 @@ El portafolio técnico de Sebastián Sánchez exhibe tres proyectos integradores
 
 > *"Hola, soy **Sebastián Sánchez**, Desarrollador Backend enfocado en la construcción de APIs RESTful escalables, seguras y robustas utilizando el ecosistema de **Node.js, Express y bases de datos relacionales con Sequelize y MySQL**.*
 >
-> *Recientemente finalicé un programa intensivo de ingeniería backend en Alkemy, donde lideré el diseño y desarrollo de arquitecturas en capas completas: desde la implementación de transacciones ACID atómicas con garantía de rollback, hasta esquemas de autenticación criptográfica con JWT, hashing Bcrypt y gestión de archivos con Multer. Mi enfoque no se limita a escribir código funcional; me obsesiona la consistencia de los datos, la seguridad preventiva y la documentación clara a través de estándares como OpenAPI y Swagger.*
+> *Recientemente finalicé un programa intensivo de ingeniería backend en SENCE, donde lideré el diseño y desarrollo de arquitecturas en capas completas: desde la implementación de transacciones ACID atómicas con garantía de rollback, hasta esquemas de autenticación criptográfica con JWT, hashing Bcrypt y gestión de archivos con Multer. Mi enfoque no se limita a escribir código funcional; me obsesiona la consistencia de los datos, la seguridad preventiva y la documentación clara a través de estándares como OpenAPI y Swagger.*
 >
 > *Me entusiasma el ritmo de innovación de organizaciones como **Mercado Libre**, donde la ingeniería resuelve desafíos masivos de inclusión financiera y comercio a escala latinoamericana. Estoy listo para incorporarme como **Talento Junior Tech**, aportar disciplina técnica y aprender aceleradamente junto a sus squads de desarrollo."*
 
@@ -229,6 +231,6 @@ El portafolio técnico de Sebastián Sánchez exhibe tres proyectos integradores
   >
   > *Apasionado por las mejores prácticas de desarrollo (Clean Code, DRY, principios REST, seguridad OWASP) y metodologías ágiles (Scrum/Kanban). En constante aprendizaje hacia arquitecturas de microservicios, contenerización con Docker y soluciones cloud.*  
   >
-  > *📫 Contacto: seba.sanchez@example.com | GitHub: github.com/SebastianSanchez2023"*
+  > *📫 Contacto: se.sancheza@duocuc.cl | GitHub: github.com/SebastianSanchez2023"*
 - **Aptitudes Principales para Validar:**  
   `Node.js`, `Express.js`, `MySQL`, `Sequelize ORM`, `REST APIs`, `JSON Web Tokens (JWT)`, `Bcrypt`, `Git`, `GitHub`, `Postman`, `Swagger / OpenAPI`, `Arquitectura de Software`, `Scrum`.
