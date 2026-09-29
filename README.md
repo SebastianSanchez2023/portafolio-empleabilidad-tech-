@@ -27,19 +27,6 @@ Esta carpeta contiene la solución completa a la evaluación final de Empleabili
 
 ## 🚀 2. Cómo Visualizar el Portafolio Web en Local
 
-1. Abre una terminal en esta carpeta:
-   ```bash
-   cd C:\Users\Seba\.gemini\antigravity-ide\scratch\portafolio-digital
-   ```
-2. Ejecuta el servidor local:
-   ```bash
-   npm start
-   ```
-3. Abre tu navegador web en:
-   👉 **http://localhost:8080**
-
-
-   ### 🚀 Cómo Visualizar el Portafolio Web en Local
 
 1. Clona el repositorio y entra en la carpeta del proyecto:
    git clone https://github.com/SebastianSanchez2023/Proyecto-Node-Express-Web-App.git
@@ -52,7 +39,10 @@ Esta carpeta contiene la solución completa a la evaluación final de Empleabili
    npm start
 
 4. Abre tu navegador web en:
-   http://localhost:8080
+   👉 **http://localhost:8080**
+
+
+
 
 ---
 
