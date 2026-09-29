@@ -1,7 +1,6 @@
-# Portafolio Digital & Proyecto de Empleabilidad — Sebastián Sánchez
+# Portafolio Digital & Proyecto de Empleabilidad — Sebastián Sánchez Aguilar
 > **Evaluación del Módulo: Desarrollo de Portafolio de un Producto Digital & Desarrollo de Empleabilidad en la Industria Digital**  
 > **Convocatoria:** Talento Junior Tech (Trainee / Junior)  
-> **Institución Formativa:** Alkemy / Duoc UC  
 > **Autor:** Sebastián Sánchez  
 > **Especialidad:** Backend Developer (Node.js, Express, MySQL, Sequelize ORM, REST APIs, JWT)  
 
